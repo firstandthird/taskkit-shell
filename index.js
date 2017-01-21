@@ -4,7 +4,8 @@ const runShell = require('runshell');
 class ShellTask extends TaskKitTask {
   execute(done) {
     runShell(this.options.command, {
-      args: this.options.arguments
+      args: this.options.arguments,
+      env: process.env
     }, (err, results) => {
       if (err) {
         return done(err);
