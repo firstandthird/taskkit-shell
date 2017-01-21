@@ -1,0 +1,16 @@
+{
+  "name": "taskkit-shell-example",
+  "scripts": {
+    "start": "taskkit ls",
+    "taskkit": "../node_modules/.bin/taskkit"
+  },
+  "taskkit": {
+    "tasks": {
+      "ls": "{{CWD}}/../index.js"
+    },
+    "ls": {
+      "command": "ls",
+      "arguments": "-lah"
+    }
+  }
+}
