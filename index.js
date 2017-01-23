@@ -5,13 +5,9 @@ class ShellTask extends TaskKitTask {
   execute(done) {
     runShell(this.options.command, {
       args: this.options.arguments,
-      env: process.env
+      log: true
     }, (err, results) => {
-      if (err) {
-        return done(err);
-      }
-      console.log(results); //eslint-disable-line no-console
-      done();
+      done(err);
     });
   }
 }
