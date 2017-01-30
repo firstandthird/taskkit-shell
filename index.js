@@ -7,6 +7,7 @@ class ShellTask extends TaskKitTask {
     runShell(this.options.command, {
       args: this.options.args,
       log: true,
+      timeout: this.options.timeout,
       env: this.options.env
     }, (err, results) => {
       if (!this.options.continue) {
