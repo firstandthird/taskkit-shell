@@ -1,3 +1,4 @@
+'use strict';
 const TaskKitTask = require('taskkit-task');
 const runShell = require('runshell');
 
